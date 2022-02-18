@@ -1,0 +1,33 @@
+%==================================coverpage.tex================================
+
+
+\newenvironment{coverpage}
+\thispagestyle{empty}
+\begin{titlepage}
+\subfile{design_cover}
+	\begin{center}
+		{\Usefont{phv} \Large \bf \title \par}
+		\vspace*{40pt}
+		\large \em \Usefont{pzc}{ 
+			A Major Project Report \par
+			Submitted to the Rajasthan Technical University\\
+			in partial fulfillment of requirements for the award of degree}\\ [.15\baselineskip] \par
+		\Usefont{ppl} {\bfseries  \degree}\\
+		in\\
+		{\Usefont{ppl} {\bfseries \branch}}\\
+		by\\
+		\bf {\author}\\
+		\bf{\rollno}
+		\vspace*{40pt}
+		\centering
+		\begin{figure}[h!]
+			\centerline{\includegraphics[scale=0.8]{logo_college.jpg}}
+		\end{figure}
+		
+		\vspace{\stretch{0.5}}
+		\large{\bf DEPARTMENT OF ELECTRICAL ENGINEERING} \par
+		\bf{TECHNO INDIA NJR INSTITUTE OF TECHNOLOGY} \par
+		\bf{UDAIPUR, RAJASTHAN} \par
+		\bf{\month}
+	\end{center}
+\end{titlepage}	

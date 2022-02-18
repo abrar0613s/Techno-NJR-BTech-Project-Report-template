@@ -1,0 +1,268 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+\usepackage{cite}
+\usepackage{framed}
+\usepackage{a4wide}
+\usepackage{float}
+\usepackage{epsfig}
+\usepackage{longtable}
+\usepackage{enumerate}
+\usepackage{afterpage}
+\usepackage{multirow}
+\usepackage{ragged2e}
+\usepackage{gensymb}
+\usepackage{amsfonts} 
+\usepackage[left=3.5cm,top=1.5cm,right=3cm,bottom=3cm]{geometry}
+\usepackage{setspace}           
+\usepackage{float}
+\usepackage{txfonts}
+\usepackage{lipsum}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{subfiles} % Best loaded last in the preamble
+
+
+\newcommand{\Usefont}[1]{\fontfamily{#1}\selectfont}
+
+\usepackage{lscape} % for landscape tables
+\renewcommand{\baselinestretch}{1.7} 
+
+\usepackage{blindtext}
+\usepackage{xpatch}
+\usepackage{url}
+\usepackage{leqno}
+\usepackage{subcaption}
+
+\linespread{1.5}
+\usepackage[intoc, english]{nomencl}
+\hyphenpenalty=5000
+\tolerance=1000
+\usepackage[nottoc]{tocbibind}
+\bibliographystyle{IEEEtran}
+\renewcommand{\bibname}{References}
+
+%********************************************************
+%*********************Figures*****************************
+% Save all figures in the folder figures and include them in your 
+% report using the command \includegraphics{figure-name}
+
+\graphicspath{{figures/}}
+
+% figure files can be in jpeg,jpg, png or pdf formats
+%*******************************************************************
+
+
+\begin{document}
+	
+	
+%****The entries in this section are to be filled in by the student with appropriate values *************
+
+% These values are used thorough out the report 
+% please fill in the appropriate values
+
+\gdef \title{Sample Report Title} % Seminar title
+\gdef \author{Abrar Ahmed chhipa}	 %student name
+\gdef \rollno{22ETCEX001} %KTU Reg No
+\gdef \acadyear{2021 - 21} % Academic year
+\gdef \month{December 2021} %Month of Report submission
+\gdef \date{21-12-2021} %Date of signing the declaration
+\gdef \dept{Electrical Engineering} %Department
+\gdef \deptabbr{Dept.of EE} %Dept name abbreviation
+\gdef \degree{Bachelor of Technology} %degree
+\gdef \branch{Electrical Engineering} %branch
+\gdef \college{Techno India NJR Institute of Technology}
+\gdef \collegeplace{Udaipur}
+
+\gdef \guide{Dr. Abrar Ahmed Chhipa} %Project guide
+\gdef \guidedes{Assistant Professor}%Project guide designation
+
+\gdef \semcordinatorA{Mr. Rajkumar Soni}% Project coordinator 1 
+\gdef \semcordinatorAdes{Assistant Professor}% Project coordinator 1 designation
+
+\gdef \semcordinatorB{Prof. Seminar coordinator 2} % Project coordinator 2 
+\gdef \semcordinatorBdes{Assistant Professor}% Project coordinator 2 designation
+
+\gdef \hod{Dr. Prakash Bahrani} %Head of Department
+\gdef \hoddes{Professor and Head} %HOD designation
+%*******************************************************************
+% The font pages. The source tex files are there in the folder
+\include{coverpage} %Unless essential Do not edit this tex file
+
+
+
+%%********************Certificate*******************
+
+% To print name of only the seminar coordinator 1 in the certificate page
+\include{certificate1} 
+
+% To print names of both the seminar coordinators in the certificate page
+%\include{certificate2} %Please uncomment this and comment the previous line
+
+%%***************************************************
+
+
+\include{declaration} %Unless essential Do not edit this tex file
+
+\pagenumbering{roman} 
+
+%%********************************Abstract***********************
+\include{abstract} % Please type in the abstract in this tex file abstract.tex
+
+%%***************************************************
+% Default Acknowledgement page
+\include{acknowledgement}  %Unless essential Do not edit this tex file
+
+
+%%***************************************************
+%%**If you have only one seminar coordinator faculty member
+% please comment the above line and uncomment this line
+
+%\include{acknowledgement1}  %Unless essential Do not edit this tex file
+%*******************************************************************
+
+\thispagestyle{empty}
+\newpage
+    
+%%**********************Table of Contents***********************
+\tableofcontents
+\listoffigures
+\listoftables
+\include{symbol} %List of Symbols (Optional) comment if not required.
+% symbold may be added in the file symbol.tex
+
+%%********************Body of the report**********
+% Arabic numbering is used in the body of the report
+
+\cleardoublepage
+\setcounter{page}{1}
+\pagenumbering{arabic}
+
+%%********************Chapter 1**********
+\chapter{Introduction}
+Start Writing here your chapter\\
+\lipsum[2] 
+\section{first order}
+\lipsum[2] 
+\section{xyz}
+\subsection{second order}
+\lipsum[2] 
+\subsubsection{third order}
+\lipsum[2] 
+\begin{itemize}
+    \item first
+    \item second
+\end{itemize}
+\begin{enumerate}
+    \item first
+    \item second
+\end{enumerate}
+
+%%********************Chapter 2**********
+\chapter{Literature Review}
+Technical writing is writing or drafting technical communication used in technical and occupational fields \cite{AAC1}, such as computer hardware and software\cite{rpi}, engineering, chemistry, aeronautics, robotics, finance\cite{japan}, medical, consumer electronics, biotechnology, and forestry. Technical writing encompasses the largest sub-field in technical communication. See figure \ref{net2} that shows the autonomous systems in Internet.
+
+\begin{figure}[!b]
+    \centering
+    \includegraphics[scale=1.5]{logo_college.jpg}
+    \caption{Caption}
+    \label{fig:my_label}
+\end{figure}
+
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.9\linewidth]{figures/ospf}
+	\caption{Autonomous System Hierarchy}
+	\label{net2}
+\end{figure}
+
+\section{section1}
+\lipsum[2] % Please comment this line and type in the introduction chapter
+
+
+\subsection{title 2}
+\lipsum[3] % Please comment this line and type in the introduction chapter
+
+\noindent The system is described by the equation \ref{sys_eq1} below. Here y is the ordinate and x is the abscissa , m is the slope and c a constant.
+
+\begin{equation} \label{sys_eq1}
+y = mx + c
+\end{equation}
+\noindent Page centered and unnumbered multiple equations. The * symbol supresses equation numbering.
+% Page centered and unnumbered equations
+\begin{align*}
+2x - 5y &=  8 \\ 
+3x + 9y &=  -12
+\end{align*}
+
+\noindent Side by side figures can be created using this environment. See fig \ref{wave} below.
+\begin{figure}[h!]
+	\centering
+	\begin{subfigure}[b]{0.4\textwidth}
+		\includegraphics[width=\textwidth]{figures/sinewave}
+		\caption{Sine Wave}
+		\label{fig:1}
+	\end{subfigure}
+	\hspace{20mm}
+	\begin{subfigure}[b]{0.4\textwidth}
+		\includegraphics[width=\linewidth]{figures/cosine}
+		\caption{Cosine Wave}
+		\label{fig:2}
+	\end{subfigure}
+\caption{The Sine and Cosine waves}
+\label{wave}
+\end{figure}
+
+%%********************Chapter 3**********
+\chapter{Results}
+\lipsum[10-15] % Please comment this line and type in the results chapter
+	
+\begin{table}[h!]
+	\centering
+	\caption{test table}
+	\vspace*{5pt}
+	\begin{tabular}{|c|c|c|}
+		\hline
+		Sl. No & Item 1 & Itm 2 \\ \hline
+		1      & 37     & 45    \\ \hline
+		2      & 42     & 23    \\ \hline
+		3      & 47     & 1     \\ \hline
+		4      & 52     & -21   \\ \hline
+		5      & 57     & -43   \\ \hline
+		6      & 62     & -65   \\ \hline
+		7      & 67     & -87   \\ \hline
+		8      & 72     & -109  \\ \hline
+		9      & 77     & -131  \\ \hline
+		10     & 82     & -153  \\ \hline
+	\end{tabular}
+\end{table}
+
+%%********************Chapter 4**********
+\chapter{Conclusion}
+\lipsum[16-17] 
+
+%%********************References**********
+%%****This template uses IEEE bibliography style
+
+ \begin{thebibliography}{99}
+	\bibitem{AAC1} Abrar Ahmed Chhipa, et al., \emph{Adaptive Neuro-fuzzy Inference System Based Maximum Power Tracking Controller for Variable Speed WECS}, 2021 \textit{Energies}, Vol. 14, No. 19, pp.6275. https://doi.org/10.3390/en14196275
+	
+	\bibitem{AAC2} Abrar Ahmed Chhipa, et al., \emph{MPPT optimisation techniques and power electronics for renewable energy systems: wind and solar energy systems}, 2022 \textit{Int. J. Swarm Intelligence (IJSI)}, Vol. 7, No. 2. https://doi.org/10.1504/IJSI.2021.10041290
+	
+	\bibitem{AAC3} Abrar Ahmed Chhipa and Vinod Kumar, \emph{DC-Microgrid Voltage Regulation using Dual Active Bridge based SVR},\textit{2021 IEEE 7th International Conference on Electrical Energy Systems (ICEES)}, 2021, pp. 490-495, doi: 10.1109/ICEES51510.2021.9383696.
+	
+	\bibitem{AAC4} Abrar Ahmed Chhipa and Vinod Kumar, \emph{Grid-Connected PV System Power Forecasting Using Nonlinear Autoregressive Exogenous Model}, \textit{The 2nd Electric Power and Renewable Energy Conference (EPREC-2021)}, 28-30 May, 2021. (In Process)
+	
+	\bibitem{rpi}
+	@online{ Raspberry pi,
+		\url{https://www.raspberrypi.org/}
+		Online; accessed 10-June-2019
+	}
+	
+	\bibitem{japan} HU, Yun Chao, et al., \emph{Mobile edge computing?A key technology
+		towards 5G}, ETSI white paper, 2015, vol. 11, no 11, p. 1-16.		
+\end{thebibliography}
+
+\end{document}
